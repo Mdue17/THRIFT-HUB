@@ -1,0 +1,33 @@
+<%if (typeof user === 'undefined') { %>
+    <%- include('partials/header-preauth') %>
+    <% } else { %>
+    <%- include('partials/header-postauth') %>
+    <%  } %>
+    <div class="grow  -mt-20 sm:mt-0	 ">
+        <div class="grid grid-cols-8 gap-4">
+            <div class="col-span-8 sm:col-start-2 sm:col-end-8 lg:col-start-3 lg:col-end-7 card bg-base-300 rounded-box place-items-center p-8">
+
+            <h1 class="text-4xl  font-bold text-center lg:text-left	 "> About</h1>
+
+            <div class=" bg-base-200 md:w-8/12     py-2 rounded-md shadow-md m-4">
+                <p class="py-2 text-lg">'THRIFT-HUB' is a free to use social networking application dedicated to making life easier for people who love thrifting.</p>
+
+                <p class="py-2 text-lg">
+
+                    This app was born out of the love i have for buying and selling second hand stuff(from toys to gaming console and even clothes).So i decide why not.Why not create an application that will make it easier for people to buy second hand stuff because physical thrifting is draining and requires patience.
+
+                    <p class="py-2 text-lg">
+                        Johannesburg is big on thrifitng but you need to know the right people and streets to thrift from, hence i have thought to solve this problem by letting you thrift from the comfort of your home.
+                     </p>
+
+                </div>
+
+
+</div>
+</div>
+</div>
+<%if (typeof user === 'undefined') { %>
+    <%- include('partials/footer-preauth') %>
+    <% } else { %>
+    <%- include('partials/footer-postauth') %>
+    <%  } %>
