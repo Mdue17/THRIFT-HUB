@@ -9,26 +9,29 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  loginID: {
+    type: String,
+    required: true,
+  },
   cloudinaryId: {
     type: String,
     require: true,
   },
   description: {
     type: String,
-    require: true,
+    required: true,
+    maxLength: 400,
+    trim: true,
   },
-//   likes: {
-//     type: Number,
-//     required: true,
-//   },
+  likes: {
+    type: Number,
+    required: true,
+  },
   price: {
     type: Number,
     require: true,
   },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
+
   createdAt: {
     type: Date,
     default: Date.now,
