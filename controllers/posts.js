@@ -4,14 +4,37 @@ const Comment = require("../models/Comment");
 
 
 module.exports = {
-  getProfile: async (req, res) => {
+  dashboard: async (req,res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
-      res.render("profile.ejs", { posts: posts, user: req.user });
-    } catch (err) {
+      let allUserPosts = await Post.find({
+        loginID: req.user.loginID,
+      }).sort({_id:-1}).lean()
+      let postsWithUserComments = await Comments.find({
+        loginID: req.user.loginID,
+      }).populate("post").sort({_id:-1}).lean()
+
+      let users = await User.find({}).lean()
+
+      res.render("dashboard.ejs", {
+        allUserPosts,
+        postsWithUserComments,
+        users,
+      });
+    } catch (err){
       console.log(err);
+      res.render("error/500")
     }
   },
+
+
+  // getProfile: async (req, res) => {
+  //   try {
+  //     const posts = await Post.find({ user: req.user.id });
+  //     res.render("profile.ejs", { posts: posts, user: req.user });
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // },
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
@@ -40,7 +63,7 @@ module.exports = {
         cloudinaryId: result.public_id,
         description: req.body.description,
         price: req.body.price,
-        user: req.user.id,
+        loginID: req.user.loginID,
       });
       console.log("Post has been added!");
       res.redirect("/profile");
