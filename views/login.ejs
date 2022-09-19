@@ -1,0 +1,55 @@
+<%- include('partials/header') -%>
+
+<main class="container">
+  <div class="row justify-content-center">
+    <section class="col-6 mt-5">
+      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+      <div class="alert alert-danger"><%= el.msg %></div>
+      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+      messages.info.forEach( el => { %>
+      <div class="alert alert-info"><%= el.msg %></div>
+      <% }) %> <% } %>
+      <form action="/login" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+
+    <div><span>or</span></div>
+    <h3><a href="/login">login using socials </a> </h3>
+    
+    <section>
+      <div class="row justify-content-center">
+        <ul>
+          <li><a href="/auth/google">Sign in with Google i.fab.fa-google-plus-g.fa-xs</a></li>
+          <li><a href="/auth/facebook"></a>Sign in with Facebook i.fab.fa-facebook-f.fa-sm</li>
+          <li><a href="/auth/instagram">Sign in with Instagram i.fab.fa-instagram.fa-sm</a></li>
+          <li><a href="/auth/twitter">Sign in with Twitter i.fab.fa-twitter.fa-sm</a></li>
+          <li><a href=""></a></li>
+        </ul>
+        </div>
+      </section>
+  </div>
+</main>
+
+<%- include('partials/footer') -%>
