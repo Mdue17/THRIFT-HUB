@@ -1,0 +1,8 @@
+
+ A thrifting web app 
+
+ - users browse for stuff to buy online
+ -also ability to sell
+ -connect people from near and far
+ - second hand shop
+ - negotiate
