@@ -1,0 +1,17 @@
+
+TODO:
+1. Add a home screen where logged in user sees his ads
+ 2. feed where he can see everyones posts
+ 3. search button to find ads
+ 4.
+ delete ability to each comment which is only visible to the user who submitted the comment.
+-the user who created the comment's id
+-
+-a conditional statement that checks the logged in user with the comment user id
+-db storage of the user who created the comment
+
+
+2. Add the username associated with each user.
+
+
+3.find the username based on the user id attached print to dom
