@@ -1,4 +1,9 @@
-<%- include('partials/header') -%>
+<%if (typeof user === 'undefined') { %>
+  <%- include('partials/header-preauth') %>
+  <% } else { %>
+  <%- include('partials/header-postauth') %>
+  <%  } %>
+
   <div class="container">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
@@ -12,4 +17,9 @@
         </ul>
     </div>
   </div>  
-<%- include('partials/footer') -%>
+
+  <%if (typeof user === 'undefined') { %>
+    <%- include('partials/footer-preauth') %>
+    <% } else { %>
+    <%- include('partials/footer-postauth') %>
+    <%  } %>
