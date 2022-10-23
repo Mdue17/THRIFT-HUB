@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="night">
+<head>
+  <!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-TDL9H74"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GTM-TDL9H74');
+</script> -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THRIFT-HUB</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+<body class="flex flex-col h-screen ">
+  <header class="sticky xs:mt-2 pt-1 pb-0  z-10 ">
+    <div class="navbar sm:pt-0 pb-0  top-0">
+      <div class="flex w-1/2 justify-between lg:hidden    -mt-16 sm:mt-0	">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li tabindex="0">
+              <a class="justify-between uppercase" href="/wall/feed">
+                Feed
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+              </a>
+              <ul class="p-2 bg-base-100">
+                <li class="hover-bordered uppercase"><a href="/wall/feed">Live Ads</a></li>
+                <li class="hover-bordered uppercase"><a href="/loggedinindex">Story Feed</a></li>
+              </ul>
+            </li>
+            <li tabindex="0">
+              <a class="justify-between uppercase" href="/wall/create">
+                Post
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+              </a>
+              <ul class="p-2 bg-base-100">
+                <li class="hover-bordered uppercase"><a href="/wall/create">Share a Picture</a> </li>
+                <li class="hover-bordered uppercase"><a href="/updatedindex">Share a Story</a></li>
+              </ul>
+            </li>
+
+            <li tabindex="0">
+              <a class="justify-between uppercase" href="/mothersday">
+                Mother's Day
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+              </a>
+            </li>
+
+            <li tabindex="0">
+              <a class="justify-between uppercase" href="/post/dashboard">
+                Settings
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+              </a>
+              <ul class="p-2 bg-base-100">
+                <li class="hover-bordered uppercase"><a class="count" href="/post/dashboard">Dashboard</a></li>
+                <li class="hover-bordered uppercase"><a href="/profile">Profile</a></li>
+                <li class="hover-bordered uppercase"><a class="hover-bordered" href='/editButton'>Edit Profile</a></li>
+                <li class="hover-bordered uppercase"><button class="checkMe uppercase">Check My Status</button></li>
+                <li class="hover-bordered uppercase"><a href="/auth/logout">Logout</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sm:flex justify-between  lg:flex lg:w-1/2 lg:justify-center  -mt-16  sm:mt-0	"><img class="h-14" src="/images/favicon.ico">
+
+        <a href="/post/dashboard" class="text-lg  font-bold text-center shrink-0  uppercase    ">THRIFT-HUB</a>
+
+
+
+      </div>
+
+      <div class="flex w-1/2 justify-center invisible lg:visible ">
+        <ul class="menu flex-row menu-horizontal p-0">
+          <li tabindex="0">
+            <a class="justify-between uppercase" href="/wall/feed">
+              Feed
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+            </a>
+            <ul class="p-2 bg-base-100">
+              <li class="hover-bordered uppercase"><a href="/wall/feed">Image Feed</a></li>
+              <li class="hover-bordered uppercase"><a href="/loggedinindex">Story Feed</a></li>
+            </ul>
+          </li>
+          <li tabindex="0">
+            <a class="justify-between uppercase" href="/wall/create">
+              Post
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+            </a>
+            <ul class="p-2 bg-base-100">
+              <li class="hover-bordered uppercase "><a href="/wall/create">Share a Picture</a> </li>
+              <li class="hover-bordered uppercase"><a href="/updatedindex">Share a Story</a></li>
+            </ul>
+          </li>
+
+
+          <li tabindex="0">
+            <a class="justify-between uppercase" href="/mothersday">
+              Mother's Day
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+            </a>
+          </li>
+
+
+          <li tabindex="0">
+            <a class="justify-between uppercase" href="/post/dashboard">
+              Settings
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+            </a>
+            <ul class="p-2 bg-base-100">
+              <li class="hover-bordered uppercase"><a class="count" href="/post/dashboard">Dashboard</a></li>
+              <li class="hover-bordered uppercase"><a href="/profile">Profile</a></li>
+              <li class="hover-bordered uppercase"><a class="hover-bordered" href='/editButton'>Edit Profile</a></li>
+              <li class="hover-bordered uppercase"><button class="checkMe uppercase">Check My Status</button></li>
+              <li class="hover-bordered uppercase"><a href="/auth/logout">Logout</a> </li>
+            </ul>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </header>
