@@ -1,3 +1,6 @@
+
+const crypto = require('crypto')
+const _ = require('lodash')
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
