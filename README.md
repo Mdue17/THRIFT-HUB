@@ -11,6 +11,8 @@ Tech Used: AWS SES, AWS S3, Stripe, Service Workers, Tailwind, Daisy UI, EJS, No
 
 ## Features
 
+![alt tag](https://github.com/Mdue17/THRIFT-HUB/blob/master/public/images/thriftfeatures.png)
+
 - ###  **Login via Google OAuth, Sell stuff by posting images of it **
 
 
