@@ -1,5 +1,7 @@
 # THRIFT-HUB
 
+![alt tag](https://github.com/Mdue17/THRIFT-HUB/blob/master/public/images/thrifthubhome.png)
+
 'THRIFT-HUB' is a Social Network and e-commerce site for SELLING AND BUYING second hand goods - Users can login to their profile, make posts, comment on other Sellers’s posts, upload, add stories, as well as make purchases of desired goods via Stripe Checkout.
 
 You can checkout it out here: [THRIFTHUB](https://www.thrift.co.za/)
