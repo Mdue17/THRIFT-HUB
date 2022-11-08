@@ -11,8 +11,9 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const authRoutes = require("./routes/auth")
 const homeRoutes = require("./routes/home");
-const postRoutes = require("./routes/posts");
-const commentRoutes = require("./routes/comments");
+const postRoutes = require("./routes/post");
+const wallRoutes = require("./routes/wall");
+const commentRoutes = require("./routes/comment");
 
 
 //Use .env file in config folder
@@ -66,6 +67,7 @@ app.use("/", homeRoutes);
 app.use("/post", postRoutes);
 app.use('/auth', authRoutes);
 app.use("/comment", commentRoutes);
+app.use("/wall", wallRoutes)
 
 
  

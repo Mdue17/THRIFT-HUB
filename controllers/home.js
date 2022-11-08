@@ -1,16 +1,17 @@
 require("dotenv").config({ path: "./config/.env" });
-const User = require("../models/User");
-const Post = require("../models/Post");
-const Comments = require("../models/Comment");
+const User = require("../models/user");
+const Post = require("../models/post");
+const Comments = require("../models/comment");
+const Wall = require("../models/wall");
+const WallComments = require("../models/wallComments");
+//const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
+const ContactUs = require("../models/contactus");
+const cloudinary = require("../middleware/cloudinary");
+let fs = require("fs");
 // const upload = require("../middleware/upload");
 // const uploadbase64 = require("../middleware/uploadbase64");
-const ContactUs = require("../models/Contactus");
-const cloudinary = require("../middleware/cloudinary");
-
 // const imageCompressionUpload = require("../middleware/imageCompressionUpload");
 
-
-let fs = require("fs");
 
 const storeItems = new Map([
   [1, { priceInCents: 2000, name: "Wish My Mom Every Year for Mother's Day" }],

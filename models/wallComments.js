@@ -1,27 +1,27 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const commentSchema = new mongoose.Schema({
-    body: {
+const WallCommentsSchema = new mongoose.Schema({
+    CaptionComment: {
         type: String,
         trim: true,
-        required: true
+        required: true,
     },
+
     loginID: {
         type: String,
         required: true,
     },
-    post: {
+    wall: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Post',
+        ref: 'Wall',
     },
     heart: [],
-
     heartBreak: [],
-    
+
     createdAt: {
         type: Date,
         default: Date.now,
     },
- })
+})
 
- module.exports = mongoose.model('Comment', commentSchema)
+module.exports = mongoose.model('WallComments', WallCommentsSchema)

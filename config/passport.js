@@ -4,7 +4,7 @@ const refresh = require('passport-oauth2-refresh');
 const passport = require('passport');
 const fetch = require("node-fetch");
 const mongoose = require("mongoose");
-const User = require("../models/User");
+const User = require("../models/user");
 const sendUsertoSendy = require("../middleware/sendySub");
 const _ = require('lodash');
 const moment = require('moment');
@@ -39,43 +39,43 @@ const axios = require('axios');
  */
 
 
- passport.serializeUser((user, done) => {
-  done(null, user.id);
-});
+//  passport.serializeUser((user, done) => {
+//   done(null, user.id);
+// });
 
-passport.deserializeUser((id, done) => {
-User.findById(id, (err, user) => {
-  done(err, user);
-});
-});
+// passport.deserializeUser((id, done) => {
+// User.findById(id, (err, user) => {
+//   done(err, user);
+// });
+// });
 
-  passport.use(
-    new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
-      User.findOne({ email: email.toLowerCase() }, (err, user) => {
-        if (err) {
-          return done(err);
-        }
-        if (!user) {
-          return done(null, false, { msg: `Email ${email} not found.` });
-        }
-        if (!user.password) {
-          return done(null, false, {
-            msg:
-              "Your account was registered using a sign-in provider. To enable password login, sign in using a provider, and then set a password under your user profile.",
-          });
-        }
-        user.comparePassword(password, (err, isMatch) => {
-          if (err) {
-            return done(err);
-          }
-          if (isMatch) {
-            return done(null, user);
-          }
-          return done(null, false, { msg: "Invalid email or password." });
-        });
-      });
-    })
-  );
+//   passport.use(
+//     new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
+//       User.findOne({ email: email.toLowerCase() }, (err, user) => {
+//         if (err) {
+//           return done(err);
+//         }
+//         if (!user) {
+//           return done(null, false, { msg: `Email ${email} not found.` });
+//         }
+//         if (!user.password) {
+//           return done(null, false, {
+//             msg:
+//               "Your account was registered using a sign-in provider. To enable password login, sign in using a provider, and then set a password under your user profile.",
+//           });
+//         }
+//         user.comparePassword(password, (err, isMatch) => {
+//           if (err) {
+//             return done(err);
+//           }
+//           if (isMatch) {
+//             return done(null, user);
+//           }
+//           return done(null, false, { msg: "Invalid email or password." });
+//         });
+//       });
+//     })
+//   );
 
 
 // /**
